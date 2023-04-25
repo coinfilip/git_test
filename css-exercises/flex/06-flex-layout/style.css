@@ -25,3 +25,63 @@ input {
   width: 400px;
   margin-bottom: 16px;
 }
+
+
+/* Solution */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+li {
+  /* removes the bullet beside the list items */
+  list-style-type: none;
+  /* removes the extra invisible space reserved for the bullet */
+  padding: 0;
+}
+
+a {
+  /* removes the underline on the anchor links */
+  text-decoration: none;
+  /* sets the font color from blue to black */
+  /* solution suggests #666 */
+  color: black;
+}
+
+button {
+  /* gotta give the button some space inside */
+  padding: 8px 16px;
+}
+
+.content {
+  display: flex;
+  /* flipping the direction to stretch them horizontally instead of vertically */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.left-links, .right-links {
+  /* make the list items stack beside instead of on top of each other */
+  display: flex;
+  /* gives space between the list items */
+  gap: 16px;
+}
+
+ul {
+  /* there's an extra space on the left of every list, so the following line removes it */
+  padding: 0;
+}
+
+.footer {
+  /* grayish background for the footer */
+  background-color: #eeeeee;
+}
