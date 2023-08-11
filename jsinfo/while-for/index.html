@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While For</title>
+</head>
+<body>
+    <script>
+        // Output even numbers in the loop task
+        let i;
+        for(i = 0; i < 10; i++) {
+            if(i % 2 == 0) {
+                alert(i);
+            }
+        }
+            // should be
+            for(i = 0; i < 10; i++) {
+                if(i % 2 == 0) {
+                    alert(i);
+                }
+            }   
+        
+        // Replace for with while task
+        i = 0;
+        while (i < 3) {
+            alert( `number ${i}!` );
+            i++;
+        }
+
+        // Repeat until the input is correct task
+        let num = 0;
+        while(num <= 100) {
+            num = prompt("Enter a number greater than 100?","");
+        }
+
+            // should or can be
+            let response;
+
+            do {
+                response = prompt("Enter a number greater than 100?", 0);
+            } while (num <= 100 && num);
+                // note: add the && num comparison as null (when user clicks cancel, returns true upon compared to 100, weird stuff)
+
+        // Output prime numbers task
+        let n = prompt("Give me a number", "");
+        let numbers = "";
+        
+        nextLoop: 
+        for (let i = 2; i <= n; i++) {
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    continue nextLoop;
+                }
+            }
+            numbers = `${numbers} ${i}`;
+        }
+
+        alert(`Prime numbers are ${numbers}`);
+
+            // the solution
+            let nm = 10;
+
+            nextPrime:
+            for (let i = 2; i <= nm; i++) { // for each i...
+
+                for (let j = 2; j < i; j++) { // look for a divisor..
+                    if (i % j == 0) continue nextPrime; // not a prime, go next i
+                }
+
+                alert( i ); // a prime
+            }
+    </script>
+</body>
+</html>
