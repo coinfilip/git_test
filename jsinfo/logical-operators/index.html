@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators</title>
+</head>
+<body>
+    <script>
+        // Check the range between task
+        if(age >= 14 && age <= 90) {
+            alert('You are between 14 and 90 years old');
+        }
+
+        // Check the range outside task
+        if (!(age >=14) && !(age <= 90)) {
+            alert('age outside the bracket');
+        }
+        
+            // should be
+            if (!(age >=14 && age <= 90)) {
+                alert('age outside the bracket');
+            }
+
+
+        if (age < 14 && age > 90) { 
+            alert('age outside the bracket');
+        }
+
+        // Check the login task
+        let username = prompt("Who's there?", "");
+
+        if(username == "Admin") {
+            let password = prompt("Password?", "");
+
+            if(password == "TheMaster") {
+                alert("Welcome!");
+            } else if(password == "" || null) {
+                alert("Cancelled");
+            } else {
+                alert("Wrong Password");
+            }
+        } else if (username == "" || null) {
+            alert("Cancelled");
+        } else {
+            alert("I don't know you");
+        }
+            // should be
+
+            let user = prompt("Who's there?", "");
+
+            if(user === "Admin") {
+                let pass = prompt("Password?", "");
+
+                if(pass === "TheMaster") {
+                    alert("Welcome!");
+                } else if(pass === "" || pass === null) {
+                    alert("Cancelled");
+                } else {
+                    alert("Wrong Password");
+                }
+            } else if (user === "" || pass === null) {
+                alert("Cancelled");
+            } else {
+                alert("I don't know you");
+            }
+
+    </script>
+</body>
+</html>
