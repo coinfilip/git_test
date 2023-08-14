@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Basics</title>
+</head>
+<body>
+    <script>
+        // Rewrite the function using '?' or '||' task
+            // Original code
+            // function checkAge(age) {
+            //     if (age > 18) {
+            //         return true;
+            //     } else {
+            //         return confirm('Did parents allow you?');
+            //     }
+            // }
+            
+            checkAge(19);
+            // Rewritten Attempt 1
+            function checkAge(age) {
+                return (age > 18) ? true : confirm('Did parents allow you?');
+            }
+
+            // Rewritten Attempt 2
+            function checkAge2(age) {
+                return (age > 18) || confirm('Did parents allow you?');
+            }
+        
+        // Function min(a, b) task
+            function min(a, b) {
+                if (a > b) {
+                    return b;
+                } else {
+                    return a;
+                }
+            }
+
+            // ternary operator can also work
+            function minimum(a, b){
+                return (a < b) ? a : b;
+            }
+
+        // Function pow(x,n) task
+            let x = +prompt('x?', '');
+            let n = +prompt('n?', '');
+
+            if (n > 0) {
+                alert(pow(x, n));
+            } else {
+                alert(`Power ${n} is not supported, use a positive integer`);
+            }
+
+
+            function pow(x, n){
+                return x ** n;
+            }
+
+    </script>
+</body>
+</html>
