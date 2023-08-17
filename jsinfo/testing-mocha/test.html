@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated testing with Mocha</title>
+</head>
+<body>
+    <script>
+        // What's wrong in the test? task
+            // original
+            it("Raises x to the power n", function() {
+                let x = 5;
+
+                let result = x;
+                assert.equal(pow(x, 1), result);
+
+                result *= x;
+                assert.equal(pow(x, 2), result);
+
+                result *= x;
+                assert.equal(pow(x, 3), result);
+            });
+
+            // should be
+            describe("Raises x to power n", function() {
+                it("5 in the power of 1 equals 5", function() {
+                    assert.equal(pow(5, 1), 5);
+                });
+
+                it("5 in the power of 2 equals 25", function() {
+                    assert.equal(pow(5, 2), 25);
+                });
+
+                it("5 in the power of 3 equals 125", function() {
+                    assert.equal(pow(5, 3), 125);
+                });
+            });
+
+            // another example; but second it only runs
+            describe("Raises x to power n", function() {
+                it("5 in the power of 1 equals 5", function() {
+                    assert.equal(pow(5, 1), 5);
+                });
+
+                it.only("5 in the power of 2 equals 25", function() {
+                    assert.equal(pow(5, 2), 25);
+                });
+
+                it("5 in the power of 3 equals 125", function() {
+                    assert.equal(pow(5, 3), 125);
+                });
+            });
+    </script>
+</body>
+</html>
