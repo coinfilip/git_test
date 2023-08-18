@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment for TOP's JS Fundamentals 3</title>
+</head>
+<body>
+    <script>
+        function add7(num) {
+            return num += 7;
+        }
+
+        let multiply = function(num, num2) {
+            return num * num2;
+        }
+
+        let capitalize = (string) => {
+            let capitalize = string.charAt(0).toUpperCase() + string.slice(1);
+            return capitalize;
+        }
+
+        function lastLetter(string) {
+            return string.charAt(string.length - 1);
+        }
+
+        console.log( add7(4) );
+        console.log( multiply(2, 5) );
+        console.log( capitalize('hello') );
+        console.log( lastLetter('trying') );
+    </script>
+</body>
+</html>
